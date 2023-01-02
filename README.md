@@ -50,12 +50,19 @@ Bonusの部分で利用します。
 # Maria DBのサーバーにアタッチする
 docker exec -it $(docker ps -q -f name=mariadb) /bin/ash
 
-# ログイン
-mariadb -hlocalhost -uroot -p42inceptiondbroot
+# rootでDBにアクセスする
+mariadb -h localhost -u root -payatoshitomi
+# db_userでDBアクセスする
+mariadb -h localhost -u db_user -p42inceptiondbroot
 
 # MySQLのコマンド
 > USE mysql;
 > SELECT * FROM <TABLE_NAME>
+
+# 補足）
+#	rootでパスワードなしでログインできないようになっている。
+mariadb -hlocalhost -uroot
+
 ```
 
 ## Memo
@@ -71,3 +78,11 @@ docker stop $(docker ps -qa); docker rm $(docker ps -qa); docker rmi -f $(docker
 ### 起動確認
 
 https://localhost:443/wp_install_log.html
+
+### ボリューム問題
+
+> docker-compose.yamlでボリュームを設定している場合、docker volume lsコマンドでは表示されません。
+> ボリュームが作成されるのは、docker-compose up -dコマンドを実行してコンテナを起動した時点でのみです。
+
+docker-compose.yamlを利用するのでボリュームは確認できない。
+しかし、`/home/ashitomi/`を見れば存在が確認できる。

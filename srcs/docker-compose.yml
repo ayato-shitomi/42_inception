@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
     nginx:
@@ -7,7 +7,7 @@ services:
             - wordpress
         build: ./requirements/nginx
         volumes:
-            - ${HOME}/data/web_data:/var/www/html
+            - /home/ashitomi/data/web_data:/var/www/html
         networks:
             - public
         ports:
@@ -20,7 +20,7 @@ services:
             - mariadb
         build: ./requirements/wordpress
         volumes:
-            - ${HOME}/data/web_data:/var/www/html
+            - /home/ashitomi/data/web_data:/var/www/html
         networks:
             - public
             - private
@@ -43,7 +43,7 @@ services:
         container_name: mariadb
         build: ./requirements/mariadb
         volumes:
-            - ${HOME}/data/db_data:/var/lib/mysql
+            - /home/ashitomi/data/db_data:/var/lib/mysql
         networks:
             - private
         restart: always
