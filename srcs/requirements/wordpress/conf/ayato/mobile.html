@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ayato Shitomi</title>
+		<link rel="stylesheet" href="index.css">
+	</head>
+
+	<body>
+		<header>
+			<div class="classMyName">Ayato Shitomi</div>
+			<div id="idHeaderPortfolio">Portfolio</div>
+			<link rel="icon" href="./srcs/favicon.ico">
+			<link rel="apple-touch-icon" href="./srcs/favicon.ico">
+		</header>
+
+		<div id="idIntroduce">
+			<div class="classTitle">INTRODUCE</div>
+			<div id="idIntroduceArea">
+				<div id="idIconAndName">
+					<div><img id="idMyIcon" width="200" height="200" src="srcs/LabPixel.png"></img></div>
+					<div id="idName">蔀 綾人</div>
+					<script>
+						const birthday = {
+							year: 2004,
+							month: 11,
+							date: 24
+						};
+		
+						function getAge(birthday){
+							var today = new Date();
+							var thisYearsBirthday = new Date(today.getFullYear(), birthday.month-1, birthday.date);
+							var age = today.getFullYear() - birthday.year;
+							if(today < thisYearsBirthday){
+								age--;
+							}
+							return age;
+						}
+						var elmAge = document.createElement("div");
+						var cntAge = document.createTextNode("(" + getAge(birthday) + ")");
+						elmAge.appendChild(cntAge);
+						elmAge.setAttribute("id","idMyAge");
+						var parentDiv = document.getElementById("idIconAndName");
+						parentDiv.appendChild(elmAge);
+					</script>
+				</div>
+				<div id="idMyState">札幌出身、札幌の定時制高校に通う男子高校生<br>個人事業「LabPixel Frameworks」代表（2022年4月設立）<br>フランス発エンジニア養成機関「42Tokyo」本科生<br>LITE inc. 所属 プログラマー・エンジニア</div>
+			</div>
+			<div id="idMyWord">「身の回りに起こること、すべてが学び」</div>
+			<div id="idTxtMajor">専門分野</div>
+			<div id="idMajorArea">
+				<div id="idLanguage" style="font-size: 35;">
+					<script src="./js/putIdLanguage.js"></script>
+				</div>
+				<div id="idMajor" style="font-size: 35;">
+					<script src="./js/putIdMajor.js"></script>
+				</div>
+			</div>
+		</div>
+		<div id="idContact">
+			<div class="classTitle">CONTACT</div>
+			<div id="idMail">
+				<div>メールは </div>
+				<div id="idAddress">ayato.shitomi [あっとまーく] gmail.com</div>
+				<div> にお願いいたします。</div>
+			</div>
+			<div id="idSNSArea">
+				<button class="classSNSButton" id="idButtonTwitter" onclick="window.open('https://twitter.com/AyatoShitomi/' + location.search)"></button>
+				<button class="classSNSButton" id="idButtonGit" onclick="window.open('https://github.com/ayato-shitomi' + location.search)"></button>
+				<button class="classSNSButton" id="idButtonInstagram" onclick="window.open('https://www.instagram.com/ayato_shitomi/' + location.search)"></button>
+			</div>
+		</div>
+
+		<footer>
+			<div>Copyright &copy; 2022 Ayato Shitomi All rights reserved.</div>
+		</footer>
+	</body>
+</html>

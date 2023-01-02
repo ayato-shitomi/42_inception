@@ -1,0 +1,294 @@
+* {margin:0; padding:0;}
+
+header {
+	background-color: white;
+	padding: 40px 0;
+	margin: 0 auto;
+	width: 100%;
+}
+
+body {
+	padding: 0 0 0 0;
+}
+
+header {
+	display: flex;
+	align-items: flex-end;
+}
+
+#idHeaderPortfolio {
+	padding: 0 0 20 20;
+	font-size: 30;
+	letter-spacing: 5;
+}
+
+.classMyName {
+	font-size: 100;
+	text-align: left;
+	padding: 0 0 0 10%;
+	letter-spacing: 11;
+}
+
+#idGalary {
+	background-color: lightgray;
+	padding: 10%;
+}
+.classGalaryBox {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	text-align: center;
+	margin: 100 5% 100 5%;
+}
+.classBoxTitle {
+	padding: 40;
+	font-size: 25;
+}
+.classBoxURL {
+	text-decoration: none;
+	border-bottom: 3px solid black;
+	color: black;
+}
+.classBoxURL:hover {
+	border-bottom: 3px solid orangered;
+}
+.classBoxMsg {
+	padding: 40;
+	font-size: 20;
+}
+.classTitle {
+	font-size: 40;
+	letter-spacing: 10;
+}
+
+#idContact {
+	padding: 10%;
+	background-color: white;
+}
+#idSNSArea {
+	padding: 10%;
+	display: flex;
+	justify-content: center;
+}
+.classSNSButton {
+	padding: 80;
+	margin: 40;
+	border: none;
+}
+#idButtonTwitter {
+	background: url(srcs/twitter.png) no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+#idButtonTwitter:hover {
+	background: url(srcs/twitter_hover.png) no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+#idButtonGit {
+	background: url(srcs/git.png) no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+#idButtonGit:hover {
+	background: url(srcs/git_hover.png) no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+#idButtonInstagram {
+	background: url(srcs/instagram.png) no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+#idButtonInstagram:hover {
+	background: url(srcs/instagram_hover.png) no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+#idIntroduce {
+	padding: 10%;
+	background-color: lightgray;
+}
+#idIconAndName {
+	display: flex;
+	align-items: flex-end;
+}
+#idName {
+	font-size: 40;
+}
+#idMyIcon {
+	padding: 0 30 0 0;
+}
+#idMyAge {
+	padding: 0 0 5 10;
+}
+#idIntroduceArea {
+	margin: 50 5% 50 5%;
+	border: solid black;
+	padding: 5%;
+}
+#idMyWord {
+	padding: 100 20 100 20;
+	font-size: 30;
+	text-align: center;
+	letter-spacing: 2;
+}
+#idMyState {
+	font-size: 20;
+	padding: 50 0 0 80;
+	letter-spacing: 2;
+	line-height: 2.5;
+}
+#idMyAge {
+	font-size: 25;
+}
+
+#idCareea {
+	padding: 10%;
+	background-color: white;
+	text-align: center;
+}
+#idCareeaArea {
+	margin: 100 10% 100 10%;
+}
+.classDateCircle {
+	border-radius: 50%;
+	background-color: rgba(195, 230, 250, 0.884);
+	width: 90px;
+	height: 90px;
+	text-align: center;
+	line-height: 90px;
+}
+.classDateCircleMonth {
+	border-radius: 50%;
+	background-color: rgba(195, 230, 250, 0.884);
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	margin: 20 20 20 20;
+}
+.classMsgCircle1 {
+	padding: 0 40 0 30;
+	font-size: 25;
+	letter-spacing: 1;
+}
+.classMsgCircle2 {
+	padding: 10 10 10 10;
+	font-size: 15;
+}
+.classCareerBox {
+	align-items: center;
+	display: flex;
+	padding: 2;
+}
+
+
+a {
+	color: black;
+	text-decoration: none;
+}
+.myBoxURL:hover {
+	color: black;
+	text-decoration: none;
+	border-bottom: 3px solid orangered;
+}
+footer {
+	background-color: lightgrey;
+	padding: 2%;
+	text-align: center;
+}
+
+#idMajorArea {
+	text-align: center;
+	align-items: flex-start;
+	margin: 0 auto;
+	padding: 0 40 40 40;
+	font-size: 25;
+}
+#idLanguage {
+	display: inline-block;
+	vertical-align: top;   
+	padding: 30;
+	letter-spacing: 3;
+	line-height: 2;
+}
+.classLangName {
+	font-size: larger;
+	letter-spacing: 5;
+}
+.classLangDate {
+	font-size: 10;
+	padding: 0;
+	margin: 0 auto;
+}
+.classParent {
+	padding: 15;
+}
+#idMajor {
+	display: inline-block;
+	vertical-align: top;
+	padding: 30;
+	letter-spacing: 1;
+	line-height: 2;
+}
+#idTxtMajor {
+	text-align: center;
+	font-size: 40;
+	padding: 20 0 0 0;
+	letter-spacing: 5;
+}
+
+#idMail {
+	padding: 20;
+	font-size: 20;
+	display: flex;
+	align-items: flex;
+	margin: 10 auto;
+}
+#idAddress {
+	color: dimgray;
+}
+
+#idCareeaGray {
+	padding: 4%;
+	background-color: lightgray;
+	text-align: center;
+}
+
+#idSiteMap {
+	padding: 3%;
+}
+#idSiteMap > a {
+	margin: 5px;
+	letter-spacing: 2;
+}
+#idFooterCR {
+	font-size: 20;
+}
+
+#idUrlButton {
+	padding: 20;
+	border: 2px solid black;
+}
+#idUrlButton:hover {
+	background-color: lightgrey;
+}
+
+#idCareeaUrl {
+	padding: 5%;
+}
+
+#idMyCareeaState {
+	padding: 50 0 0 80;
+	text-align: left;
+}
+
+.classMyCareea {
+	font-size: 20;
+	letter-spacing: 2;
+}
+
+table {
+	border-spacing: 20px;
+}

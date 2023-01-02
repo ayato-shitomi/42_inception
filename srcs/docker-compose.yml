@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+    nginx:
+        container_name: nginx
+        depends_on:
+            - wordpress
+        build: ./requirements/nginx
+        volumes:
+            - ${HOME}/data/web_data:/var/www/html
+        networks:
+            - public
+        ports:
+            - "443:443"
+        restart: always
+
+    wordpress:
+        container_name: wordpress
+        depends_on:
+            - mariadb
+        build: ./requirements/wordpress
+        volumes:
+            - ${HOME}/data/web_data:/var/www/html
+        networks:
+            - public
+            - private
+        environment:
+            DOMAIN_NAME: ${DOMAIN_NAME}
+            MYSQL_HOST: ${MYSQL_HOST}
+            WP_DB_NAME: ${WP_DB_NAME}
+            WP_DB_USER: ${WP_DB_USER}
+            WP_DB_PASSWORD: ${WP_DB_PASSWORD}
+            WP_TITLE: ${WP_TITLE}
+            WP_ADMIN_USER: ${WP_ADMIN_USER}
+            WP_ADMIN_PASSWORD: ${WP_ADMIN_PASSWORD}
+            WP_ADMIN_EMAIL: ${WP_ADMIN_EMAIL}
+            WP_USER: ${WP_USER}
+            WP_PASSWORD: ${WP_PASSWORD}
+            WP_EMAIL: ${WP_EMAIL}
+            WP_FILE_ONINSTALL: ${WP_FILE_ONINSTALL}
+
+    mariadb:
+        container_name: mariadb
+        build: ./requirements/mariadb
+        volumes:
+            - ${HOME}/data/db_data:/var/lib/mysql
+        networks:
+            - private
+        restart: always
+        environment:
+            MYSQL_HOST: ${MYSQL_HOST}
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            WP_DB_NAME: ${WP_DB_NAME}
+            WP_DB_USER: ${WP_DB_USER}
+            WP_DB_PASSWORD: ${WP_DB_PASSWORD}
+
+networks:
+    public:
+    private:

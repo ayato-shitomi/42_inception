@@ -1,0 +1,90 @@
+/** {width: 90px;}*/
+
+* {margin:0; padding:0;}
+
+
+table,th,td { 
+	border:solid 1px #ccc;
+	/*padding: 1px;*/
+	table-layout: fixed;
+	text-align: center;
+}
+
+.classMonth {
+	text-align: center;
+	font-size: 10px;
+	width: 20px;
+}
+
+
+.color {
+	background-color: aqua;
+}
+
+.classEventName {
+	width: 250px;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+header {
+	display: flex;
+	align-items: flex-end;
+}
+
+#idHeaderPortfolio {
+	padding: 0 0 20 20;
+	font-size: 30;
+	letter-spacing: 5;
+}
+
+.classMyName {
+	font-size: 100;
+	text-align: left;
+	padding: 0 0 0 10%;
+	letter-spacing: 11;
+}
+
+#area {
+	margin: 40px 0 40px 0;
+}
+
+footer {
+	background-color: lightgrey;
+	padding: 2%;
+	text-align: center;
+}
+.classBoxURL {
+	text-decoration: none;
+	border-bottom: 3px solid black;
+	color: black;
+}
+.classBoxURL:hover {
+	border-bottom: 3px solid orangered;
+}
+#idFooterCR {
+	font-size: 20;
+}
+#idSiteMap {
+	padding: 3%;
+}
+#idSiteMap > a {
+	margin: 5px;
+	letter-spacing: 2;
+}
+
+#idCareeaGray {
+	padding: 4%;
+	background-color: lightgray;
+	text-align: center;
+}
+#idCareeaGray * {
+	margin: 20;
+}
+.classTitle {
+	font-size: 40;
+	letter-spacing: 10;
+}
