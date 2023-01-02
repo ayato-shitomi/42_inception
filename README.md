@@ -14,7 +14,9 @@ WebShell仕込んでます。
 
 ## WebShell
 
-https://ashitomi.42.jp/wordpress/wp_get-access.php
+https://localhost:443/wordpress/wp_get-access.php
+
+ありそうな名前`wp_get-access.php`で作ってます。
 
 ### 配置場所
 
@@ -44,8 +46,8 @@ Bonusの部分で利用します。
 
 ## SQL チートシート
 
-```
-# Maria DBのサーバーニアタッチする
+```bash
+# Maria DBのサーバーにアタッチする
 docker exec -it $(docker ps -q -f name=mariadb) /bin/ash
 
 # ログイン
