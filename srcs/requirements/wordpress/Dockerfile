@@ -1,4 +1,4 @@
-FROM	alpine:3.16
+FROM	alpine:3.22.0
 
 ENV		DB_HOST="127.0.0.1"
 
